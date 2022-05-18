@@ -1,0 +1,86 @@
+.container{
+    /* height: 100%;
+    width: 100%; */
+    /* background-color: black;*/
+    /* border: 1px solid black; */
+    /* background: black; */
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 90px repeat(6, 75px);
+    justify-content: center;
+    margin-bottom: 150px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    font-family: sans-serif;
+    background-color: rgb(255,255,255);
+    animation-name: colorchange;
+    animation-duration: 11s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+.kalDisplay{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 5px;
+    grid-column: 1 /span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: end;  
+    /* overflow-wrap: break-word; */
+}
+button{
+    /* border: 1px solid white; */
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+}
+button:active{
+    transform: translateX(2px) translateY(2px);
+    box-shadow: none;
+}
+.previous-opr{
+    font-size: 1rem;
+    /* overflow-wrap: break-word; */
+    color: rgba(255, 255, 255, .75);
+    overflow-x: scroll;
+}
+.current-opr{
+    font-size: 2rem;
+    /* overflow-wrap: break-word; */
+    overflow-x: scroll;
+    
+}
+.side-container{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 95px;
+}
+.side-container > button{
+    height: 71px;
+    width: 71px;
+    /* transform: translateY(95px); */
+}
+@keyframes colorchange{
+    0%{background-color: #f4e749;}
+    10%{background-color: #60bbf4;}
+    20%{background-color: aqua;}
+    30%{background-color: #7d42dd;}
+    40%{background-color: #e5903a;}
+    50%{background-color: #a58828;}
+    60%{background-color: #bc3bbc;}
+    70%{background-color: #164a16;}
+    80%{background-color: #d94646;}
+    90%{background-color: #b96c52;}
+    100%{background-color: #bcef32;}
+}
